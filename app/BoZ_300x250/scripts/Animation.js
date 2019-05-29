@@ -5,6 +5,7 @@ app.Animation = (function () {
 
     var t = TweenMax;
     var tl1 = new TimelineMax();
+    var tl2 = new TimelineMax({paused: true});
 
 
     var txt1a = document.getElementById('txt1a');
@@ -24,10 +25,13 @@ app.Animation = (function () {
     var txt5b = document.getElementById('txt5b');
     var txt5c = document.getElementById('txt5c');
 
-    var logo = document.getElementById('logo');
+    // var logo = document.getElementById('logo');
     var cta = document.getElementById('cta');
 
     var curtain = document.getElementById('curtain');
+
+    var flag = document.getElementById('flag');
+    var sprite = document.getElementById('sprite');
 
     var banner = document.getElementById('banner');
     var buttonExit = document.getElementById('button-exit');
@@ -78,15 +82,23 @@ app.Animation = (function () {
             .from(txt4b, .5, {y: "-=10", opacity: 0, ease: Sine.easeInOut})
             .from(txt4c, .5, {y: "-=10", opacity: 0, ease: Sine.easeInOut})
 
-            .from(curtain, .75, {opacity: 0}, "+=1.5")
+            .from(curtain, .75, {
+                opacity: 0, onComplete: function () {
+                    tl2.play();
+                }
+            }, "+=1.5")
 
-            .from(logo, 1.5, {y: "-=10", opacity: 0, ease: Sine.easeInOut})
+            .from(flag, 1.5, {y: "-=10", opacity: 0, ease: Sine.easeInOut})
             .from(txt5a, .75, {y: "-=10", opacity: 0, ease: Sine.easeInOut}, "-=1")
             .from(txt5b, .75, {y: "-=10", opacity: 0, ease: Sine.easeInOut}, "-=.25")
             .from(txt5c, 1.5, {y: "-=10", opacity: 0, ease: Sine.easeInOut}, "-=1.5")
 
 
             .from(cta, 1, {scale: 0, opacity: 0, ease: Elastic.easeInOut}, "-=.25");
+
+        tl2.to(flag, 0.1, {display: "block"})
+            .to(sprite, 1, {x: -1824, ease: SteppedEase.config(24)});
+
 
     }
 

@@ -38,6 +38,19 @@ body {
     z-index: 999;
   }
 
+  .container {
+    width: 76px;
+    height:100px;
+    overflow: hidden;
+    position: absolute;
+    left: 41px;
+    top: 30px;
+  }
+
+  #flag {
+    display: none;
+  }
+
   #txt1a, #txt2a, #txt3a {
     clip: rect(0px, 300px, 69px, 0px);
   }

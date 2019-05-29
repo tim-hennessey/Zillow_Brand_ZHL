@@ -5,6 +5,7 @@ app.Animation = (function () {
 
     var t = TweenMax;
     var tl1 = new TimelineMax();
+    var tl2 = new TimelineMax();
 
 
     var txt1a = document.getElementById('txt1a');
@@ -19,6 +20,9 @@ app.Animation = (function () {
     var cta = document.getElementById('cta');
 
     var curtain = document.getElementById('curtain');
+
+    // var ball = document.getElementById('catch');
+    var sprite = document.getElementById('sprite');
 
     var banner = document.getElementById('banner');
     var buttonExit = document.getElementById('button-exit');
@@ -72,6 +76,9 @@ app.Animation = (function () {
             .from(txt6, .5, {opacity:0, ease: Sine.easeInOut},"-=.75")
 
             .from(cta, 1, {scale: 0, opacity: 0, ease: Elastic.easeInOut}, "-=.25");
+
+        tl2.to(sprite, 3, {repeat:5, y: -5760, ease: SteppedEase.config(20)});
+
 
     }
 

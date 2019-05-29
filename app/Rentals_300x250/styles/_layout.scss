@@ -38,6 +38,19 @@ body {
     z-index: 999;
   }
 
+  .container {
+    width: 67px;
+    height: 63px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 140px;
+  }
+
+  #dog {
+    display: none;
+  }
+
   #txt1a, #txt2a, #txt3a, #txt4a {
     clip: rect(0px, 300px, 81px, 0px);
   }

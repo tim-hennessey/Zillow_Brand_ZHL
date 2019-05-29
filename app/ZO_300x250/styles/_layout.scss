@@ -38,6 +38,15 @@ body {
     z-index: 999;
   }
 
+  .container {
+    width: 140px;
+    height:72px;
+    overflow: hidden;
+    position: absolute;
+    left: 91px;
+    top: 94px;
+  }
+
   #txt1a {
     clip: rect(0px, 300px, 50px, 0px);
   }

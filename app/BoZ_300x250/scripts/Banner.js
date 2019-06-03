@@ -6,7 +6,10 @@ app.Banner = (function () {
     // --------------------------------------------------------------------------------------
     // initialize
     function initialize() {
-        dispatchEvent(new Event("READY"));
+        var event = document.createEvent('Event');
+        event.initEvent('READY', true, true);
+        document.dispatchEvent(event);
+
         document.getElementById('button-exit').addEventListener('click', handleExit, false);
     }
 

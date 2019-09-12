@@ -6,6 +6,7 @@ app.Animation = (function () {
     var t = TweenMax;
     var tl1 = new TimelineMax();
     var tl2 = new TimelineMax();
+    var tl3 = new TimelineMax();
 
 
     var txt1a = document.getElementById('txt1a');
@@ -37,7 +38,10 @@ app.Animation = (function () {
     var curtain = document.getElementById('curtain');
 
     var dog = document.getElementById('dog');
-    var sprite = document.getElementById('sprite');
+    var sprite1 = document.getElementById('sprite1');
+
+    var couple = document.getElementById('couple');
+    var sprite2 = document.getElementById('sprite2');
 
     var banner = document.getElementById('banner');
     var buttonExit = document.getElementById('button-exit');
@@ -48,10 +52,9 @@ app.Animation = (function () {
     function initialize() {
 
         t.set(banner, {opacity: 1});
-        t.set(cta, {transformOrigin: "50% 70%"});
+        t.set(cta, {transformOrigin: "50% 63%"});
         t.set(dog, {display: "block"});
-        // t.set(sprite, {y:-8127});
-
+        t.set(couple, {display: "block"});
 
         buttonExit.addEventListener('mouseover', function () {
             // t.to(cta_bg, .25, {backgroundColor: "rgba(211, 78, 255, 1)"});
@@ -107,7 +110,9 @@ app.Animation = (function () {
 
             .from(cta, 1, {scale: 0, opacity: 0, ease: Elastic.easeInOut}, "-=.25");
 
-        tl2.to(sprite, 5, {repeat:-1, x: -8040, ease: SteppedEase.config(24)});
+        tl2.to(sprite1, 5, {repeat:-1, x: -8040, ease: SteppedEase.config(24)});
+
+        tl3.to(sprite2, 8, {repeat:2, y: -6336, ease: SteppedEase.config(33)});
 
     }
 

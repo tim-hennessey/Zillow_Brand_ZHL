@@ -38,33 +38,39 @@ body {
     z-index: 999;
   }
 
-  .container {
+  .container1 {
     width: 67px;
     height: 63px;
     overflow: hidden;
     position: absolute;
     right: 0;
-    top: 140px;
+    bottom: 83px;
   }
+
+  .container2 {
+    width: 243px;
+    height: 192px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 227px;
+  }
+
 
   #dog {
     display: none;
   }
 
   #txt1a, #txt2a, #txt3a, #txt4a {
-    clip: rect(0px, 300px, 81px, 0px);
+    clip: rect(0px, 300px, 98px, 0px);
   }
 
-  #txt1b, #txt3b, #txt4b {
-    clip: rect(81px, 300px, 250px, 0px);
-  }
-
-  #txt2b {
-    clip: rect(81px, 300px, 115px, 0px);
+  #txt1b, #txt2b, #txt3b, #txt4b {
+    clip: rect(98px, 300px, 146px, 0px);
   }
 
   #txt2c {
-    clip: rect(115px, 300px, 250px, 0px);
+    clip: rect(146px, 300px, 600px, 0px);
   }
 
   #curtain {

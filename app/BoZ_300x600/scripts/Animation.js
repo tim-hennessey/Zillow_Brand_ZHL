@@ -3,7 +3,7 @@ var app = app || {};
 
 app.Animation = (function () {
 
-    var tl = new TimelineMax({repeat: 1});
+    // var tl = new TimelineMax({repeat: 1});
 
     var animationWindow = document.getElementById('animationWindow');
 
@@ -12,7 +12,7 @@ app.Animation = (function () {
         animType: 'svg',
         loop: false,
         prerender: true,
-        autoplay: true,
+        autoplay: false,
         path: './scripts/data.json'
     };
 
@@ -23,18 +23,27 @@ app.Animation = (function () {
     // set default properties
     function initialize() {
 
+        TweenMax.set(anim, {force3D: true});
+
         anim.setSpeed(1);
+
     }
 
     // --------------------------------------------------------------------------------------
     // Starts the animation
     function start() {
 
-        // tl.to({frame: 0}, 15, {
-        //     frame: anim.totalFrames - 1, onUpdate: function () {
-        //         anim.goToAndStop(Math.round(this.target.frame), true)
-        //     }, ease: Linear.easeNone
-        // });
+
+        TweenMax.delayedCall(.5, myFunction);
+
+        function myFunction() {
+            anim.play();
+        }
+
+
+
+
+
 
     }
 

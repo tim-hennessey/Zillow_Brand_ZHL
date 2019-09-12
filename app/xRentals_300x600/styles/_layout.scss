@@ -1,0 +1,112 @@
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #555;
+}
+
+#banner {
+  background: #3dcdfd;
+  position: absolute;
+  overflow: hidden;
+  width: $banner-width;
+  height: $banner-height;
+  left: 50%;
+  top: 50%;
+  margin-left: -$banner-width / 2;
+  margin-top: -$banner-height / 2;
+  opacity:0;
+
+  #button-exit {
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+  }
+
+  #border {
+    border: 1px solid #ccc;
+    display: block;
+    width: $banner-width - 2;
+    height: $banner-height - 2;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 999;
+  }
+
+  .container1 {
+    width: 89px;
+    height:117px;
+    overflow: hidden;
+    position: absolute;
+    left: 20px;
+    top: 184px;
+  }
+
+  .container2 {
+    width: 300px;
+    height:215px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 206px;
+  }
+
+  #flag, #shake {
+    display: none;
+  }
+
+  #txt1a, #txt2a, #txt3a {
+    clip: rect(0px, 300px, 69px, 0px);
+  }
+
+  #txt1b, #txt2b, #txt3b {
+    clip: rect(69px, 300px, 250px, 0px);
+  }
+
+
+  #txt4a {
+    clip: rect(0px, 300px, 69px, 0px);
+  }
+
+  #txt4b {
+    clip: rect(69px, 300px, 110px, 0px);
+  }
+
+  #txt4c {
+    clip: rect(110px, 300px, 250px, 0px);
+  }
+
+
+  #txt5a {
+    clip: rect(0px, 300px, 240px, 0px);
+  }
+
+  #txt5b {
+    clip: rect(240px, 300px, 300px, 0px);
+  }
+
+  #txt5c {
+    clip: rect(300px, 300px, 353px, 0px);
+  }
+
+  #txt5d {
+    clip: rect(353px, 300px, 600px, 0px);
+  }
+
+  #curtain {
+    width: $banner-width;
+    height: $banner-height;
+    background: #001751;
+  }
+
+  .default {
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+}
